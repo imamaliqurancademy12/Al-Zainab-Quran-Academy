@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Al-Zainab Quran Academy | Learn Quran Online</title>
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/jpeg" href="Logo_img.png">
+
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+   <header>
+    <div class="container nav-container">
+        <div class="logo">
+            <!-- Add logo image here - REPLACE src with your logo URL -->
+            <img src="Logo_img.png" alt="Al-Zainab Logo" class="logo-img">
+            <div class="logo-text">
+                <h2>Al-Zainab <span>Quran Academy</span></h2>
+                <p>Learn with Love & Devotion</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#fees">Fee Structure</a></li>
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <!-- HERO SECTION (Wide background image) -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Al-Zainab Quran Academy</h1>
+            <p>Empowering hearts with the Holy Quran – Shia Islamic education for kids & adults worldwide.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Start Free Trial</a>
+                <a href="#courses" class="btn btn-secondary">View Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Al-Zainab Academy?</h2>
+                <p>Your trusted partner in Quranic learning</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card"><i class="fas fa-chalkboard-teacher"></i><h3>1-on-1 Live Classes</h3><p>Personalized attention from qualified Shia teachers.</p></div>
+                <div class="feature-card"><i class="fas fa-clock"></i><h3>24/7 Availability</h3><p>Learn any time, from anywhere in the world.</p></div>
+                <div class="feature-card"></i><i class="fas fa-female"></i><h3>Female Tutors</h3><p>Dedicated female teachers for sisters & kids.</p></div>
+                <div class="feature-card"><i class="fas fa-dollar-sign"></i><h3>Affordable Fees</h3><p>No registration charges, flexible monthly plans.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION (wide images) -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Courses</h2>
+                <p>Comprehensive Islamic & Quranic education</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card"><img src="Images/Courses/Qaida with Tajweed.png" alt="Qaida Course" class="course-img"><h3>Qaida with Tajweed</h3><p>Foundation course for beginners.</p></div>
+                <div class="course-card"><img src="Images/Courses/Basic Quran Reading.png" alt="Quran Reading" class="course-img"><h3>Basic Quran Reading</h3><p>Learn proper pronunciation.</p></div>
+                <div class="course-card"><img src="Images/Courses/Translation & Tafseer.jpg" alt="Translation" class="course-img"><h3>Translation & Tafseer</h3><p>Understand the message of Allah.</p></div>
+                <div class="course-card"><img src="Images/Courses/Hifz (Memorization).png" alt="Memorization" class="course-img"><h3>Hifz (Memorization)</h3><p>Become a Hafiz/Hafiza.</p></div>
+                <div class="course-card"><img src="Images/Courses/Islamic Fiqh (Jaffria).png" alt="Fiqh" class="course-img"><h3>Islamic Fiqh (Jaffria)</h3><p>Shia jurisprudence essentials.</p></div>
+                <div class="course-card"><img src="Images/Courses/Nehjul Balagha.png" alt="Nehjul Balagha" class="course-img"><h3>Nehjul Balagha</h3><p>Wisdom of Imam Ali (AS).</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEE STRUCTURE SECTION -->
+<section id="fees" class="fee-structure">
+    <div class="container">
+        <div class="section-title">
+            <h2>Monthly Fee Structure</h2>
+            <p>Affordable plans for every budget - No hidden charges</p>
+        </div>
+
+        <!-- WEEKDAY PACKAGES (Monday to Friday) -->
+        <div class="fee-category">
+            <h3 class="category-title"><i class="fas fa-calendar-week"></i> Weekday Classes (Monday - Friday)</h3>
+            <div class="fee-grid">
+                
+                <!-- 1 Day/Week -->
+                <div class="fee-card">
+                    <div class="fee-badge">Basic</div>
+                    <h3>1 Day / Week</h3>
+                    <p class="days-count">4 Days / Month</p>
+                    <div class="duration">30 Minutes / Day</div>
+                    <div class="price">$30 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $30</small>
+                        <small>AUD: $30</small>
+                        <small>UK: £20</small>
+                        <small>Europe: €20</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('1 Day/Week', 30)">Select Plan</button>
+                </div>
+
+                <!-- 2 Days/Week -->
+                <div class="fee-card">
+                    <div class="fee-badge">Standard</div>
+                    <h3>2 Days / Week</h3>
+                    <p class="days-count">8 Days / Month</p>
+                    <div class="duration">30 Minutes / Day</div>
+                    <div class="price">$35 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $35</small>
+                        <small>AUD: $35</small>
+                        <small>UK: £22</small>
+                        <small>Europe: €22</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('2 Days/Week', 35)">Select Plan</button>
+                </div>
+
+                <!-- 3 Days/Week -->
+                <div class="fee-card">
+                    <div class="fee-badge">Popular</div>
+                    <h3>3 Days / Week</h3>
+                    <p class="days-count">12 Days / Month</p>
+                    <div class="duration">30 Minutes / Day</div>
+                    <div class="price">$40 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $40</small>
+                        <small>AUD: $45</small>
+                        <small>UK: £25</small>
+                        <small>Europe: €25</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('3 Days/Week', 40)">Select Plan</button>
+                </div>
+
+                <!-- 4 Days/Week -->
+                <div class="fee-card">
+                    <div class="fee-badge">Advanced</div>
+                    <h3>4 Days / Week</h3>
+                    <p class="days-count">16 Days / Month</p>
+                    <div class="duration">30 Minutes / Day</div>
+                    <div class="price">$45 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $45</small>
+                        <small>AUD: $50</small>
+                        <small>UK: £28</small>
+                        <small>Europe: €28</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('4 Days/Week', 45)">Select Plan</button>
+                </div>
+
+                <!-- 5 Days/Week -->
+                <div class="fee-card">
+                    <div class="fee-badge">Best Value</div>
+                    <h3>5 Days / Week</h3>
+                    <p class="days-count">20 Days / Month</p>
+                    <div class="duration">30 Minutes / Day</div>
+                    <div class="price">$55 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $55</small>
+                        <small>AUD: $55</small>
+                        <small>UK: £35</small>
+                        <small>Europe: €35</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('5 Days/Week', 55)">Select Plan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEEKEND SPECIAL PACKAGES (Saturday & Sunday) -->
+        <div class="fee-category weekend">
+            <h3 class="category-title"><i class="fas fa-calendar-weekend"></i> Weekend Special (Saturday & Sunday)</h3>
+            <div class="fee-grid">
+                
+                <!-- Saturday Only -->
+                <div class="fee-card weekend-card">
+                    <div class="fee-badge">Weekend</div>
+                    <h3>Saturday Only</h3>
+                    <p class="days-count">4 Days / Month</p>
+                    <div class="duration">45 Minutes / Day</div>
+                    <div class="price">$40 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $40</small>
+                        <small>AUD: $40</small>
+                        <small>UK: £25</small>
+                        <small>Europe: €25</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('Saturday Only', 40)">Select Plan</button>
+                </div>
+
+                <!-- Sunday Only -->
+                <div class="fee-card weekend-card">
+                    <div class="fee-badge">Weekend</div>
+                    <h3>Sunday Only</h3>
+                    <p class="days-count">4 Days / Month</p>
+                    <div class="duration">45 Minutes / Day</div>
+                    <div class="price">$40 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $40</small>
+                        <small>AUD: $40</small>
+                        <small>UK: £25</small>
+                        <small>Europe: €25</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('Sunday Only', 40)">Select Plan</button>
+                </div>
+
+                <!-- Both Saturday & Sunday -->
+                <div class="fee-card weekend-card featured">
+                    <div class="fee-badge">Best for Working Professionals</div>
+                    <h3>Saturday + Sunday</h3>
+                    <p class="days-count">8 Days / Month</p>
+                    <div class="duration">45 Minutes / Day</div>
+                    <div class="price">$70 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $70</small>
+                        <small>AUD: $70</small>
+                        <small>UK: £44</small>
+                        <small>Europe: €44</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('Saturday + Sunday', 70)">Select Plan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAMILY PACKAGE (Special Offer for Two Students) -->
+        <div class="fee-category family">
+            <h3 class="category-title"><i class="fas fa-users"></i> Family Package (Two Students)</h3>
+            <p class="family-note">Special discount for siblings or family members - 60 minutes daily</p>
+            <div class="fee-grid">
+                
+                <!-- 3 Days/Week Family -->
+                <div class="fee-card family-card">
+                    <div class="fee-badge">Family</div>
+                    <h3>3 Days / Week</h3>
+                    <p class="days-count">12 Days / Month</p>
+                    <div class="duration">60 Minutes / Day</div>
+                    <div class="price">$70 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $70</small>
+                        <small>AUD: $75</small>
+                        <small>UK: £44</small>
+                        <small>Europe: €44</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('Family 3 Days/Week', 70)">Select Plan</button>
+                </div>
+
+                <!-- 5 Days/Week Family -->
+                <div class="fee-card family-card featured">
+                    <div class="fee-badge">Family Best Value</div>
+                    <h3>5 Days / Week</h3>
+                    <p class="days-count">20 Days / Month</p>
+                    <div class="duration">60 Minutes / Day</div>
+                    <div class="price">$100 <span>/ month</span></div>
+                    <div class="currencies">
+                        <small>USD/CAD: $100</small>
+                        <small>AUD: $100</small>
+                        <small>UK: £60</small>
+                        <small>Europe: €60</small>
+                    </div>
+                    <button class="btn-fee" onclick="selectPlan('Family 5 Days/Week', 100)">Select Plan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CUSTOM PLAN NOTE -->
+        <div class="custom-plan-note">
+            <i class="fas fa-handshake"></i>
+            <h4>Need a Custom Plan?</h4>
+            <p>Contact us for personalized schedules and special discounts for groups or madrasas.</p>
+            <a href="#contact" class="btn-custom">Contact Us for Custom Plan</a>
+        </div>
+    </div>
+</section>
+
+    <!-- TEACHERS SECTION (AI realistic human images) -->
+    <section id="teachers" class="teachers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Qualified Teachers</h2>
+                <p>Highly trained Shia Ithna Ashari scholars & tutors</p>
+            </div>
+            <div class="teachers-grid">
+                <!-- Teacher 1 - AI realistic human image. REPLACE image link on LINE ~176 -->
+                <div class="teacher-card"><img src="Images/Teacher/Qari Raza Abbas.png" alt="Teacher Qari Raza" class="teacher-img"><h3>Qari Raza Abbas</h3><p>Hifz & Tajweed Expert</p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <!-- Teacher 2 - AI realistic image. REPLACE link on LINE ~179 -->
+                <div class="teacher-card"><img src="Images/Teacher/Sr. Fatima Zehra.png" alt="Teacher Fatima" class="teacher-img"><h3>Sr. Fatima Zehra</h3><p>Quran Translation & Tafseer</p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <!-- Teacher 3 - AI realistic image. REPLACE link on LINE ~182 -->
+                <div class="teacher-card"><img src="Images/Teacher/Maulana Hassan Naqvi.png" alt="Teacher Hassan" class="teacher-img"><h3>Maulana Hassan Naqvi</h3><p>Nehjul Balagha & Fiqh</p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <!-- Teacher 4 - AI realistic image. REPLACE link on LINE ~185 -->
+                <div class="teacher-card"><img src="Images/Teacher/Sr. Sakina Jafri.jpg" alt="Teacher Sakina" class="teacher-img"><h3>Sr. Sakina Jafri</h3><p>Qaida & Kids Specialist</p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENTS SECTION (AI realistic human images - diverse students) -->
+    <section id="students" class="students">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Successful Students</h2>
+                <p>Hundreds of Momineen & Mominaat have graduated</p>
+            </div>
+            <div class="students-grid">
+                <!-- Student 1 - AI realistic image. REPLACE link on LINE ~196 -->
+                <div class="student-card"><img src="Images/Student/Ayesha R..png" alt="Student Ayesha" class="student-img"><h3>Ayesha R.</h3><p>Completed Hifz in 2 years</p><i class="fas fa-quote-right"></i></div>
+                <!-- Student 2 - AI realistic image. REPLACE link on LINE ~199 -->
+                <div class="student-card"><img src="Images/Student/Mohammad S..png" alt="Student Mohammad" class="student-img"><h3>Mohammad S.</h3><p>Memorized 10 Juz</p><i class="fas fa-quote-right"></i></div>
+                <!-- Student 3 - AI realistic image. REPLACE link on LINE ~202 -->
+                <div class="student-card"><img src="Images/Student/Zahra K..png" alt="Student Zahra" class="student-img"><h3>Zahra K.</h3><p>Tafseer Course Graduate</p><i class="fas fa-quote-right"></i></div>
+                <!-- Student 4 - AI realistic image. REPLACE link on LINE ~205 -->
+                <div class="student-card"><img src="Images/Student/Ali H..png" alt="Student Ali" class="student-img"><h3>Ali H.</h3><p>Qaida & Tajweed Expert</p><i class="fas fa-quote-right"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL SLIDER (JavaScript interactive) -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Parents & Students Say</h2>
+                <p>Real experiences from our academy family</p>
+            </div>
+            <div class="slider-container">
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <div class="testimonial active"><i class="fas fa-quote-left"></i><p>"Al-Zainab Academy transformed my daughter's Quran recitation. Teachers are very patient and professional."</p><h4>- Umm Kulthum, Canada</h4></div>
+                    <div class="testimonial"><i class="fas fa-quote-left"></i><p>"Flexible timing and excellent Shia teachers. Highly recommend for Quran memorization."</p><h4>- Syed Raza, UK</h4></div>
+                    <div class="testimonial"><i class="fas fa-quote-left"></i><p>"The female teacher for my daughter is amazing. Jazakallah Khair!"</p><h4>- Fatima, Australia</h4></div>
+                </div>
+                <button class="slider-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (interactive toggle) -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item"><div class="faq-question"><h3>Do you offer free trial classes?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span></div><div class="faq-answer"><p>Yes, we offer 3 days of free trial classes for every course. Contact us to schedule.</p></div></div>
+                <div class="faq-item"><div class="faq-question"><h3>Are your teachers certified Shia scholars?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span></div><div class="faq-answer"><p>Absolutely. All our teachers are Ithna Ashari Shia Muslims with Ijazah in Quranic sciences.</p></div></div>
+                <div class="faq-item"><div class="faq-question"><h3>What platform do you use for classes?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span></div><div class="faq-answer"><p>We teach via Zoom, Skype, and Google Meet based on your preference.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & ADMISSION FORM -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get Quick Admission</h2>
+                    <a href="http://wa.me/923460057405?text=Assalamu%20Alaikum!%20I'm%20interested%20in%20your%20courses." target="_blank" rel="noopener noreferrer"><p><i class="fas fa-phone-alt"></i>+92 346 00 57 405</p></a>
+                    <a href="alzainabquranacademy12@gmail.com?subject=Inquiry%20about%20Courses&body=Assalamu%20Alaikum,%20I'm%20interested%20in%20learning%20more%20about%20your%20courses." target="_blank" rel="noopener noreferrer"><p><i class="fas fa-envelope"></i> alzainabquranacademy12@gmail.com</p></a>
+                    <p><i class="fas fa-globe"></i> 24/7 Online Classes</p>
+                    <div class="secure-badge"><i class="fas fa-lock"></i> Secure Form – Protected by Cloudflare</div>
+                </div>
+                <form id="admissionForm" class="contact-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <input type="tel" id="phone" placeholder="WhatsApp Number">
+                    <select id="course">
+                        <option>Select a course</option>
+                        <option>Qaida with Tajweed</option>
+                        <option>Basic Quran Reading</option>
+                        <option>Translation & Tafseer</option>
+                        <option>Hifz (Memorization)</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Request Free Trial <i class="fas fa-arrow-right"></i></button>
+                    <p id="formStatus" class="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Al-Zainab Quran Academy – Serving Momineen Worldwide. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/shiaquranhub" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/923460057405" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-solid fa-video"></i></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+    <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/923460057405?text=Assalamu%20Alaikum!%20I'm%20interested%20in%20Al-Zainab%20Quran%20Academy%20courses." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+         alt="WhatsApp Chat" 
+         class="whatsapp-icon">
+    <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+</a>
+
+<!-- Floating Email Button -->
+<a href="mailto:zeeshanalihadari@gmail.com?subject=Inquiry%20about%20Courses&body=Assalamu%20Alaikum,%20I'm%20interested%20in%20learning%20more%20about%20your%20courses."
+   class="email-float" 
+   target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" 
+         alt="Email Us" 
+         class="email-icon">
+    <span class="email-tooltip">Send us an email</span>
+</a>
+
+</body>
+</html>
