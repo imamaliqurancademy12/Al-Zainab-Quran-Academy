@@ -364,34 +364,85 @@
         </div>
     </section>
 
-    <!-- CONTACT & ADMISSION FORM -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2>Get Quick Admission</h2>
-                    <a href="http://wa.me/923460057405?text=Assalamu%20Alaikum!%20I'm%20interested%20in%20your%20courses." target="_blank" rel="noopener noreferrer"><p><i class="fas fa-phone-alt"></i>+92 346 00 57 405</p></a>
-                    <a href="alzainabquranacademy12@gmail.com?subject=Inquiry%20about%20Courses&body=Assalamu%20Alaikum,%20I'm%20interested%20in%20learning%20more%20about%20your%20courses." target="_blank" rel="noopener noreferrer"><p><i class="fas fa-envelope"></i> alzainabquranacademy12@gmail.com</p></a>
-                    <p><i class="fas fa-globe"></i> 24/7 Online Classes</p>
-                    <div class="secure-badge"><i class="fas fa-lock"></i> Secure Form – Protected by Cloudflare</div>
-                </div>
-                <form id="admissionForm" class="contact-form">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Email Address" required>
-                    <input type="tel" id="phone" placeholder="WhatsApp Number">
-                    <select id="course">
-                        <option>Select a course</option>
-                        <option>Qaida with Tajweed</option>
-                        <option>Basic Quran Reading</option>
-                        <option>Translation & Tafseer</option>
-                        <option>Hifz (Memorization)</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary">Request Free Trial <i class="fas fa-arrow-right"></i></button>
-                    <p id="formStatus" class="form-status"></p>
-                </form>
-            </div>
+    <!-- Contact Form Section -->
+<div class="web3form-container">
+    <form action="https://api.web3forms.com/submit" method="POST" class="web3-contact-form" id="web3Form">
+        
+        <!-- Access Key (Hidden) -->
+        <input type="hidden" name="access_key" value="3edd0c9b-2468-4342-8836-38c62c144388">
+        
+        <!-- Optional: Redirect after submit -->
+        <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you.html">
+        
+        <!-- Optional: Subject line for email -->
+        <input type="hidden" name="subject" value="New Contact Form Submission from Al-Zainab Website">
+        
+        <!-- Form Title -->
+        <div class="form-header">
+            <h3>Send us a Message</h3>
+            <p>We'll get back to you within 24 hours</p>
         </div>
-    </section>
+        
+        <!-- Name Field -->
+        <div class="form-group">
+            <label for="name">
+                <i class="fas fa-user"></i> Full Name <span class="required">*</span>
+            </label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        
+        <!-- Email Field -->
+        <div class="form-group">
+            <label for="email">
+                <i class="fas fa-envelope"></i> Email Address <span class="required">*</span>
+            </label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        
+        <!-- Phone Field (Optional) -->
+        <div class="form-group">
+            <label for="phone">
+                <i class="fas fa-phone-alt"></i> Phone Number (Optional)
+            </label>
+            <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567">
+        </div>
+        
+        <!-- Course Selection (Dropdown) -->
+        <div class="form-group">
+            <label for="course">
+                <i class="fas fa-book-open"></i> Interested Course
+            </label>
+            <select id="course" name="course">
+                <option value="">Select a course</option>
+                <option value="Qaida with Tajweed">Qaida with Tajweed</option>
+                <option value="Basic Quran Reading">Basic Quran Reading</option>
+                <option value="Translation & Tafseer">Translation & Tafseer</option>
+                <option value="Hifz (Memorization)">Hifz (Memorization)</option>
+                <option value="Islamic Fiqh">Islamic Fiqh (Jaffria)</option>
+                <option value="Nahjul Balagha">Nahjul Balagha</option>
+            </select>
+        </div>
+        
+        <!-- Message Field -->
+        <div class="form-group">
+            <label for="message">
+                <i class="fas fa-comment-dots"></i> Your Message <span class="required">*</span>
+            </label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+        </div>
+        
+        <!-- Honeypot Spam Protection (Keep empty) -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        
+        <!-- Form Status Message -->
+        <div id="formStatus" class="form-status"></div>
+    </form>
+</div>
 
     <!-- FOOTER -->
     <footer>
