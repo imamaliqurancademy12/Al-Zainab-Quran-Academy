@@ -179,217 +179,63 @@ if (whatsappButton) {
     });
 }
 
-/* ========== WEB3FORM STYLING ========== */
-.web3form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
+// ========== WEB3FORM HANDLING ==========
+const web3Form = document.getElementById('web3Form');
+const formStatus = document.getElementById('formStatus');
+const submitBtn = document.querySelector('.submit-btn');
 
-.web3-contact-form {
-    width: 100%;
-}
-
-/* Form Header */
-.form-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.form-header h3 {
-    font-size: 1.8rem;
-    color: #0b3b2f;
-    margin-bottom: 0.5rem;
-}
-
-.form-header p {
-    color: #7a7a8a;
-    font-size: 0.9rem;
-}
-
-/* Form Groups */
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #1e1e2a;
-    font-size: 0.9rem;
-}
-
-.form-group label i {
-    color: #c29a2e;
-    margin-right: 8px;
-}
-
-.required {
-    color: #e74c3c;
-}
-
-/* Input Fields */
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    transition: all 0.3s ease;
-    background: #fafafa;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #c29a2e;
-    background: white;
-    box-shadow: 0 0 0 3px rgba(194, 154, 46, 0.1);
-}
-
-.form-group input:hover,
-.form-group select:hover,
-.form-group textarea:hover {
-    border-color: #c29a2e;
-}
-
-/* Placeholder Styling */
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #b0b0b0;
-    font-size: 0.9rem;
-}
-
-/* Submit Button */
-.submit-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #0b3b2f 0%, #1a5a48 100%);
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 40px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.submit-btn i {
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
-}
-
-.submit-btn:hover {
-    background: linear-gradient(135deg, #c29a2e 0%, #d4af37 100%);
-    color: #1e1e2a;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(194, 154, 46, 0.3);
-}
-
-.submit-btn:hover i {
-    transform: translateX(5px);
-}
-
-.submit-btn:active {
-    transform: translateY(0);
-}
-
-/* Form Status Messages */
-.form-status {
-    margin-top: 1.5rem;
-    padding: 12px;
-    border-radius: 12px;
-    text-align: center;
-    font-size: 0.9rem;
-    display: none;
-}
-
-.form-status.success {
-    display: block;
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.form-status.error {
-    display: block;
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-.form-status.loading {
-    display: block;
-    background: #e7f3ff;
-    color: #004085;
-    border: 1px solid #b8daff;
-}
-
-/* Disabled Button State */
-.submit-btn.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .web3form-container {
-        padding: 1.5rem;
-        margin: 0 1rem;
-    }
-    
-    .form-header h3 {
-        font-size: 1.5rem;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 10px 14px;
-        font-size: 0.9rem;
-    }
-    
-    .submit-btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-    }
-}
-
-/* Loading Animation for Submit Button */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-.submit-btn.loading i {
-    animation: spin 1s linear infinite;
-}
-
-/* Success Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.form-status.success,
-.form-status.error {
-    animation: fadeInUp 0.5s ease;
+if (web3Form) {
+    web3Form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        formStatus.className = 'form-status loading';
+        formStatus.innerHTML = '<i class="fas fa-spinner"></i> Sending message...';
+        formStatus.style.display = 'block';
+        submitBtn.disabled = true;
+        submitBtn.classList.add('disabled');
+        
+        // Get form data
+        const formData = new FormData(web3Form);
+        
+        try {
+            const response = await fetch(web3Form.action, {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                // Success message
+                formStatus.className = 'form-status success';
+                formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! We\'ll contact you soon.';
+                web3Form.reset();
+                
+                // Auto-hide success message after 5 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 5000);
+            } else {
+                // Error message
+                formStatus.className = 'form-status error';
+                formStatus.innerHTML = '<i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again.';
+            }
+        } catch (error) {
+            // Network error
+            formStatus.className = 'form-status error';
+            formStatus.innerHTML = '<i class="fas fa-exclamation-circle"></i> Network error. Please check your connection.';
+        } finally {
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('disabled');
+            
+            // Auto-hide error after 5 seconds
+            setTimeout(() => {
+                if (formStatus.className !== 'form-status success') {
+                    formStatus.style.display = 'none';
+                }
+            }, 5000);
+        }
+    });
 }
